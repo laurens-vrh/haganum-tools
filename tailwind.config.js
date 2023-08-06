@@ -22,6 +22,18 @@ module.exports = {
 				custompurple: "#8300cf",
 				customblue: "#0073d1",
 			},
+			colors: {
+				appella: {
+					primary: {
+						400: "#bc0bf7",
+					},
+					secondary: {
+						200: "#1d144d",
+						300: "#110642",
+						700: "#040035",
+					},
+				},
+			},
 		},
 	},
 	plugins: [],

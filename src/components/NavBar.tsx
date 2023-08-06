@@ -3,16 +3,16 @@ import Link from "next/link";
 const links = [
 	{
 		path: "/",
-		name: "Woordjes"
+		name: "Woordjes",
 	},
 	{
-		path: "/werkwoorden",
-		name: "Werkwoorden"
+		path: "/appella",
+		name: "Appella",
 	},
 	{
 		path: "/nuntia",
-		name: "Nuntia"
-	}
+		name: "Nuntia",
+	},
 ];
 
 export function NavBar({ active }: { active?: string }) {

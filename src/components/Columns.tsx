@@ -1,4 +1,4 @@
-export function SelectGroup({
+export function Columns({
 	children,
 	margin = true,
 }: {
