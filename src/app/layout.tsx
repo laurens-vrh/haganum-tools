@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="nl" className="dark h-screen box-border">
+			<head>
+				<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+			</head>
 			<body className="bg-zinc-950 text-white h-screen md:overflow-hidden">
 				<NavBar></NavBar>
 				<Content>{children}</Content>
