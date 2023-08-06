@@ -1,0 +1,26 @@
+{
+	"short_name": "Haganum Tools",
+	"name": "Haganum Tools",
+	"icons": [
+		{
+			"src": "/img/favicon_192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/img/icon_512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"id": "/",
+	"start_url": "/",
+	"background_color": "#09090b",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#18181b",
+	"shortcuts": [],
+	"description": "Gereedschappen om het leven voor jou als haganummer makkelijker te maken.",
+	"screenshots": [],
+	"prefer_related_applications": true
+}
