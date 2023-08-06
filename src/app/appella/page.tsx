@@ -140,7 +140,7 @@ export default function Page() {
 	);
 }
 
-export function predict(model: tf.LayersModel, verb: string): Verb {
+function predict(model: tf.LayersModel, verb: string): Verb {
 	const encoded = encodeString(verb);
 	const padded = padArrays([encoded], maxVerbLength)[0];
 	const inputTensor = tf.tensor2d([padded]);
@@ -170,7 +170,7 @@ function encodeString(str: string) {
 			char === " " ? 0 : char.charCodeAt(0) - "a".charCodeAt(0) + 1
 		);
 }
-export function padArrays(
+function padArrays(
 	sequences: number[][],
 	maxLen: number,
 	padding = "pre",
