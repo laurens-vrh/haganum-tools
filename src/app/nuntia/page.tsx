@@ -4,11 +4,11 @@ import type { Metadata } from "next";
 import { useState } from "react";
 import { SelectGroup } from "@/components/woordjes/SelectGroup";
 
-export const metadata: Metadata = {
-	title: "Nuntia | Haganum Tools",
-	description:
-		"Schrijf je in, en ontvang voortaan automatisch een e-mail naar je schoolaccount zodra een nieuw cijfer op Magister staat!",
-};
+// export const metadata: Metadata = {
+// 	title: "Nuntia | Haganum Tools",
+// 	description:
+// 		"Schrijf je in, en ontvang voortaan automatisch een e-mail naar je schoolaccount zodra een nieuw cijfer op Magister staat!",
+// };
 
 export default function Page() {
 	const [username, setUsername] = useState("");

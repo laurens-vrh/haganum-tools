@@ -10,18 +10,18 @@ import { SelectGroup } from "@/components/woordjes/SelectGroup";
 import { WordBox } from "@/components/woordjes/WordBox";
 const books: Book[] = importedBooks["default" as any] as any;
 
-export const metadata: Metadata = {
-	title: "Woordjes | Haganum Tools",
-	description:
-		"Hier vind je de precieze vertaling van alle woordjes uit je leerboeken, en hoef je niet te hannesen met woordenlijsten of Google Translate."
-};
+// export const metadata: Metadata = {
+// 	title: "Woordjes | Haganum Tools",
+// 	description:
+// 		"Hier vind je de precieze vertaling van alle woordjes uit je leerboeken, en hoef je niet te hannesen met woordenlijsten of Google Translate."
+// };
 
 const booksById = {} as { [id: string]: Book };
 books.forEach(async (book) => {
 	booksById[book.id] = {
 		...book,
 		list: (await import(`../../public/data/woordjes/lists/${book.id}.json`))
-			.default
+			.default,
 	};
 });
 
@@ -32,7 +32,7 @@ const replaceChars = {
 	ü: "u",
 	ö: "o",
 	ä: "a",
-	ï: "i"
+	ï: "i",
 };
 
 export default function Page() {
@@ -111,7 +111,7 @@ export default function Page() {
 							onChange={(e) => {
 								setDirections({
 									...directions,
-									[selectedBook]: e.currentTarget.value
+									[selectedBook]: e.currentTarget.value,
 								});
 							}}
 							onClick={(e) => {
@@ -121,7 +121,7 @@ export default function Page() {
 								).toString();
 								setDirections({
 									...directions,
-									[selectedBook]: e.currentTarget.value
+									[selectedBook]: e.currentTarget.value,
 								});
 							}}
 						>
