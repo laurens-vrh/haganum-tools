@@ -1,6 +1,6 @@
 export function Footlet() {
 	return (
-		<footer className="text-m  bottom-0 left-0 p-4 bg-zinc-900 w-full | md:rounded-tr-lg md:w-fit md:absolute translate-y-[4.5rem] md:hover:translate-y-0 md:transition-transform">
+		<footer className="text-m  bottom-0 left-0 p-4 bg-zinc-900 w-full z-30 | md:rounded-tr-lg md:w-fit md:absolute translate-y-[4.5rem] md:hover:translate-y-0 md:transition-transform">
 			<p className="md:text-sm">
 				Heb je vragen of suggesties? Neem contact met me op!
 			</p>

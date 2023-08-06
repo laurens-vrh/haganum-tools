@@ -7,7 +7,7 @@ const links = [
 	},
 	{
 		path: "/appella",
-		name: "Appella",
+		name: "Appella AI",
 	},
 	{
 		path: "/nuntia",

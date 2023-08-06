@@ -36,6 +36,9 @@ export default function RootLayout({
 				<NavBar></NavBar>
 				<Content>{children}</Content>
 				<Footlet></Footlet>
+
+				{/* reserve dynamic classnames for ToggleButton*/}
+				<span className="absolute hidden origin-left origin-top"></span>
 			</body>
 		</html>
 	);
