@@ -19,12 +19,14 @@ export function ToggleButton({
 				<div
 					className={`relative grid grid-${
 						direction === "horizontal" ? "rows" : "cols"
-					}-1`}
-					style={{
-						[` gridTemplate${
-							direction === "horizontal" ? "Columns" : "Rows"
-						}`]: `repeat(${options.length}, minmax(0, 1fr))`,
-					}}
+					}-1 grid-${direction === "horizontal" ? "cols" : "rows"}-${
+						options.length
+					}`}
+					// style={{
+					// 	[` gridTemplate${
+					// 		direction === "horizontal" ? "Columns" : "Rows"
+					// 	}`]: `repeat(${options.length}, minmax(0, 1fr))`,
+					// }}
 				>
 					<div
 						className={`absolute bg-appella-primary-400 rounded-lg p-2 ${
