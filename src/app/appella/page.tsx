@@ -13,7 +13,7 @@ const verbProperties = {
 		"praesens",
 		"imperfectum",
 		"perfectum",
-		"plusquamperfectum",
+		"plusquamperf.",
 		"futurum",
 		"futurum exactum",
 		"-",
@@ -117,7 +117,7 @@ export default function Page() {
 								"praesens",
 								"imperfectum",
 								"perfectum",
-								"plusquamperfectum",
+								"plusquamperf.",
 								"futurum",
 								"futurum exactum",
 							]}
@@ -152,9 +152,7 @@ export default function Page() {
 				</Columns>
 			</div>
 			<div className="bg-appella-secondary-300 rounded-2xl p-4">
-				<p className="text-sm">
-					model: appella_20230805_614_2x64_1500e_bs5_l0.1431
-				</p>
+				<p className="text-xs">appella_20230805_614_2x64_1500e_bs5_l0.1431</p>
 			</div>
 		</div>
 	);
