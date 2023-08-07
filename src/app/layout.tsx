@@ -18,11 +18,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="nl" className="dark h-screen">
+		<html lang="nl" className="dark min-h-screen">
 			<head>
 				<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
 			</head>
-			<body className="box-border bg-zinc-950 text-white h-screen md:overflow-hidden">
+			<body className="box-border bg-zinc-950 text-white min-h-screen">
 				<Script
 					strategy="afterInteractive"
 					src="https://www.googletagmanager.com/gtag/js?id=G-M58C29JPP3"

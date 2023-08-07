@@ -65,98 +65,96 @@ export default function Page() {
 	}, [model, searchTerm]);
 
 	return (
-		<div className="overflow-y-auto h-[90vh]">
-			<div className="bg-appella-secondary-700 w-full mx-auto rounded-3xl p-4 grid grid-rows-[min-content] gap-4 | md:w-[450px]">
-				<div className="bg-appella-secondary-300 rounded-2xl p-4 grid grid-rows-[min-content] gap-4 ">
-					<h2 className="text-2xl">Appella AI</h2>
-					<p className="">
-						Heb geen moeite meer met het benoemen van Latijnse werkwoorden! Vul
-						hieronder een in, en het wordt automatisch benoemd. Let er wel op
-						dat dit een kunstmatige intelligentie is, en het resultaat dus niet
-						altijd klopt.
-					</p>
-				</div>
-				<div className="bg-appella-secondary-300 rounded-2xl p-4 grid grid-rows-[min-content] gap-4 ">
-					<div>
-						<p className="mb-2">Werkwoord</p>
-						<div className="bg-appella-secondary-200 rounded-xl py-2 px-4 w-full focus-within:outline outline-1 outline-appella-secondary-100 relative">
-							<input
-								className="bg-transparent outline-none w-full"
-								type="text"
-								placeholder="typ een werkwoord"
-								onChange={(e) => {
-									setLoading(true);
-									setSearchTerm(e.currentTarget.value);
-								}}
-							/>
-							<div
-								className={`absolute top-1/2 right-4 -translate-y-1/2 ${
-									loading ? "opacity-100" : "opacity-0"
-								}`}
-							>
-								<Spinner />
-							</div>
+		<div className="bg-appella-secondary-700 w-full mx-auto rounded-3xl p-4 grid grid-rows-[min-content] gap-4 | md:w-[500px]">
+			<div className="bg-appella-secondary-300 rounded-2xl p-4 grid grid-rows-[min-content] gap-4 ">
+				<h2 className="text-2xl">Appella AI</h2>
+				<p className="">
+					Heb geen moeite meer met het benoemen van Latijnse werkwoorden! Vul
+					hieronder een in, en het wordt automatisch benoemd. Let er wel op dat
+					dit een kunstmatige intelligentie is, en het resultaat dus niet altijd
+					klopt.
+				</p>
+			</div>
+			<div className="bg-appella-secondary-300 rounded-2xl p-4 grid grid-rows-[min-content] gap-4 ">
+				<div>
+					<p className="mb-2">Werkwoord</p>
+					<div className="bg-appella-secondary-200 rounded-xl py-2 px-4 w-full focus-within:outline outline-1 outline-appella-secondary-100 relative">
+						<input
+							className="bg-transparent outline-none w-full"
+							type="text"
+							placeholder="typ een werkwoord"
+							onChange={(e) => {
+								setLoading(true);
+								setSearchTerm(e.currentTarget.value);
+							}}
+						/>
+						<div
+							className={`absolute top-1/2 right-4 -translate-y-1/2 ${
+								loading ? "opacity-100" : "opacity-0"
+							}`}
+						>
+							<Spinner />
 						</div>
 					</div>
 				</div>
-				<div className="bg-appella-secondary-300 rounded-2xl p-4">
-					<Columns margin={false}>
-						<div className="w-full">
-							<ToggleButton
-								name="Modus"
-								options={[
-									"indicativus",
-									"imperativus",
-									"infinitivus",
-									"coniunctivus",
-								]}
-								value={[modus]}
-							></ToggleButton>
-							<ToggleButton
-								name="Tijd"
-								options={[
-									"praesens",
-									"imperfectum",
-									"perfectum",
-									"plusquamperfectum",
-									"futurum",
-									"futurum exactum",
-								]}
-								value={[tijd]}
-							></ToggleButton>
-						</div>
-						<div className="w-full">
-							<ToggleButton
-								name="Persoon"
-								options={["1e", "2e", "3e"]}
-								value={[persoon]}
-								direction="horizontal"
-							></ToggleButton>
-							<ToggleButton
-								name="Getal"
-								options={["enkelvoud", "meervoud"]}
-								value={[getal]}
-							></ToggleButton>
-							<ToggleButton
-								name="Genus"
-								options={["actief", "passief"]}
-								value={[genus]}
-								direction="horizontal"
-							></ToggleButton>
-							<ToggleButton
-								name="Aanvullingen"
-								options={["1", "2", "3"]}
-								value={[rollen]}
-								direction="horizontal"
-							></ToggleButton>
-						</div>
-					</Columns>
-				</div>
-				<div className="bg-appella-secondary-300 rounded-2xl p-4">
-					<p className="text-sm">
-						model: appella_20230805_614_2x64_1500e_bs5_l0.1431
-					</p>
-				</div>
+			</div>
+			<div className="bg-appella-secondary-300 rounded-2xl p-4">
+				<Columns margin={false}>
+					<div className="w-full">
+						<ToggleButton
+							name="Modus"
+							options={[
+								"indicativus",
+								"imperativus",
+								"infinitivus",
+								"coniunctivus",
+							]}
+							value={[modus]}
+						></ToggleButton>
+						<ToggleButton
+							name="Tijd"
+							options={[
+								"praesens",
+								"imperfectum",
+								"perfectum",
+								"plusquamperfectum",
+								"futurum",
+								"futurum exactum",
+							]}
+							value={[tijd]}
+						></ToggleButton>
+					</div>
+					<div className="w-full">
+						<ToggleButton
+							name="Persoon"
+							options={["1e", "2e", "3e"]}
+							value={[persoon]}
+							direction="horizontal"
+						></ToggleButton>
+						<ToggleButton
+							name="Getal"
+							options={["enkelvoud", "meervoud"]}
+							value={[getal]}
+						></ToggleButton>
+						<ToggleButton
+							name="Genus"
+							options={["actief", "passief"]}
+							value={[genus]}
+							direction="horizontal"
+						></ToggleButton>
+						<ToggleButton
+							name="Aanvullingen"
+							options={["1", "2", "3"]}
+							value={[rollen]}
+							direction="horizontal"
+						></ToggleButton>
+					</div>
+				</Columns>
+			</div>
+			<div className="bg-appella-secondary-300 rounded-2xl p-4">
+				<p className="text-sm">
+					model: appella_20230805_614_2x64_1500e_bs5_l0.1431
+				</p>
 			</div>
 		</div>
 	);

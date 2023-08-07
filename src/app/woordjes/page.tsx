@@ -72,7 +72,7 @@ export default function Page() {
 	}, [searchTerm, directions, selectedBook]);
 
 	return (
-		<div className="h-full bg-inherit grid grid-cols-1 | md:grid-cols-[min-content_1fr] gap-4">
+		<div className="md:h-[90vh] bg-inherit grid grid-cols-1 | md:grid-cols-[min-content_1fr] gap-4">
 			<div className="relative p-4 bg-gradient-primary-background border-custompurple border rounded-xl | md:min-w-[min(400px,40vw)]">
 				<h2 className="text-xl">Woordjes</h2>
 				<p className="mt-2">
@@ -147,8 +147,8 @@ export default function Page() {
 				/>
 			</div>
 
-			<div className="overflow-hidden">
-				<div className="relative p-4 bg-gradient-primary-background border-custompurple border rounded-xl h-full overflow-auto grid grid-cols-2 auto-rows-min gap-2 | lg:grid-cols-3">
+			<div className="h-full overflow-auto">
+				<div className="relative p-4 bg-gradient-primary-background border-custompurple border rounded-xl grid grid-cols-2 auto-rows-min gap-2 | lg:grid-cols-3">
 					{searchResults.map((word) => (
 						<WordBox word={word} />
 					))}
