@@ -8,7 +8,7 @@ export function Footlet() {
 			<ul className="w-fit mx-auto flex gap-8">
 				<li>
 					<a
-						href="mailto:6081@leerling.haganum.nl"
+						href="mailto:lauverhaar+haganumtools@gmail.com"
 						className="flex gap-2 items-center hover:underline focus:underline"
 					>
 						<img src="/img/icon-mail.svg" alt="" className="w-6" />
